@@ -2,5 +2,5 @@
 </script>
 
 <template>
-        <h1>dsgdsgdsgds</h1>
+        <h1></h1>
 </template>
