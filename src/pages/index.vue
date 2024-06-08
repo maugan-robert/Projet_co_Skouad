@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
-import { ref } from 'vue'
 import CardEvents from '@/components/CardEvents.vue';
 import CardSport from '@/components/CardSport.vue';
+import CardDefis from '@/components/CardDefis.vue';
 </script>
 
 <template>
@@ -20,14 +20,24 @@ import CardSport from '@/components/CardSport.vue';
         <h2 class="py-4 text-lg font-bold text-zinc-900">TES SPORTS</h2>
         <RouterLink class="underline text-teal-600 font-semibold text-base ml-auto" to="/sports"><p>Voir plus</p></RouterLink>
         </div>
-        <div class="flex justify-between">
-                <CardSport/>
-                <CardSport/>
+        <div class="container">
+         <div class="container">
+        <div class="flex flex-wrap justify-between gap-4">
+        <CardSport/>
+        <CardSport/>
+        <CardSport/>
+        <CardSport/>
         </div>
-        
-
-
-
+        </div>
+        </div>
+        <div class="flex items-center justify-between">
+        <h2 class="py-4 text-lg font-bold text-zinc-900">DÉFIS SUGGÉRÉS</h2>
+        <RouterLink class="underline text-teal-600 font-semibold text-base ml-auto" to="/defis"><p>Voir plus</p></RouterLink>
+        </div>
+        <div>
+        <CardDefis/>
+        <CardDefis/>
+        </div>
 
 
 

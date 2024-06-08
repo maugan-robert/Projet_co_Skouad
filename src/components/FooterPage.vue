@@ -5,13 +5,12 @@ import IconMessages from './icons/IconMessage.vue'
 import IconMatch from './icons/IconMatch.vue'
 import IconProfil from './icons/IconProfil.vue'
 import { RouterLink } from 'vue-router'
-import { ref } from 'vue'
 import { useRouter } from 'vue-router';
 const router = useRouter();
 </script>
 
 <template>
-    <main class="border-t-2 border-zinc-100 bg-white w-full fixed bottom-0">
+    <main class="border-t-2 border-zinc-100 bg-white w-full z-20 fixed bottom-0">
     <div class="flex justify-around items-center w-full  py-4">
       <div class="flex flex-col items-center" :class="{ 'text-teal-600': $route.path === '/events' }">
         <RouterLink to="/events">

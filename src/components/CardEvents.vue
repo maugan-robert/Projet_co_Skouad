@@ -17,6 +17,6 @@ import IconFav from './icons/IconFav.vue'
                 <p class="p-1 text-base font-medium text-zinc-900 ">Sam. 16 mars</p>
             </div>
         </div>
-        <IconFav />
+        <IconFav class="fill-black"/>
     </div>
 </template>
