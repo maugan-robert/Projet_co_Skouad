@@ -4,13 +4,10 @@ import IconBack from './icons/IconBack.vue'
 import IconMoney from './icons/IconMoney.vue'
 import IconSettings from './icons/IconSettings.vue'
 import IconNotifs from './icons/IconNotifs.vue'
-
 import { RouterLink } from 'vue-router'
 import { ref } from 'vue'
-
 import { useRouter } from 'vue-router';
 const router = useRouter();
-
 function goBack() {
   router.go(-1);
 }
