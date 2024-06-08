@@ -10,7 +10,7 @@ import CardDefis from '@/components/CardDefis.vue';
         <div class="mx-4">
         <div class="flex items-center justify-between">
         <h2 class="py-4 text-lg font-bold text-zinc-900">TES PROCHAINS EVENTS</h2>
-        <RouterLink class="underline text-teal-600 font-semibold text-base ml-auto" to="/events"><p>Voir plus</p></RouterLink>
+        <RouterLink class="underline text-teal-600 font-semibold text-base ml-auto" to="/events"><p>Voir autres</p></RouterLink>
         </div>
         <div class="flex flex-col justify-center gap-2">
         <CardEvents/>
@@ -18,11 +18,11 @@ import CardDefis from '@/components/CardDefis.vue';
         </div>
         <div class="flex items-center justify-between">
         <h2 class="py-4 text-lg font-bold text-zinc-900">TES SPORTS</h2>
-        <RouterLink class="underline text-teal-600 font-semibold text-base ml-auto" to="/sports"><p>Voir plus</p></RouterLink>
+        <RouterLink class="underline text-teal-600 font-semibold text-base ml-auto" to="/sports"><p>Voir autres</p></RouterLink>
         </div>
         <div class="container">
          <div class="container">
-        <div class="flex flex-wrap justify-between gap-4">
+        <div class="grid grid-cols-2 gap-2">
         <CardSport/>
         <CardSport/>
         <CardSport/>
@@ -32,9 +32,9 @@ import CardDefis from '@/components/CardDefis.vue';
         </div>
         <div class="flex items-center justify-between">
         <h2 class="py-4 text-lg font-bold text-zinc-900">DÉFIS SUGGÉRÉS</h2>
-        <RouterLink class="underline text-teal-600 font-semibold text-base ml-auto" to="/defis"><p>Voir plus</p></RouterLink>
+        <RouterLink class="underline text-teal-600 font-semibold text-base ml-auto" to="/defis"><p>Voir autres</p></RouterLink>
         </div>
-        <div>
+        <div class="pb-16">
         <CardDefis/>
         <CardDefis/>
         </div>

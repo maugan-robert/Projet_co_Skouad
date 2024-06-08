@@ -11,36 +11,36 @@ const router = useRouter();
 
 <template>
     <main class="border-t-2 border-zinc-100 bg-white w-full z-20 fixed bottom-0">
-    <div class="flex justify-around items-center w-full  py-4">
+    <div class="flex justify-around items-center w-full  px-4 py-2">
       <div class="flex flex-col items-center" :class="{ 'text-teal-600': $route.path === '/events' }">
         <RouterLink to="/events">
-          <IconEvents class="stroke-current"/>
+          <IconEvents class="stroke-current w-6 h-6"/>
         </RouterLink>
-        <p class="text-sm font-semibold">Events</p>
+        <p class="text-xs font-semibold">Events</p>
       </div>
       <div class="flex flex-col items-center" :class="{ 'text-teal-600': $route.path === '/defis' }">
         <RouterLink to="/defis">
-          <IconDefis class="stroke-current" />
+          <IconDefis class="stroke-current w-6 h-6" />
         </RouterLink>
-        <p class="text-sm font-semibold">Defis</p>
+        <p class="text-xs font-semibold">Défis</p>
       </div>
       <div class="flex flex-col items-center" :class="{ 'text-teal-600': $route.path === '/match' }">
         <RouterLink to="/match">
-          <IconMatch class="stroke-current"  />
+          <IconMatch class="stroke-current w-6 h-6"  />
         </RouterLink>
-        <p class="text-sm font-semibold">Match</p>
+        <p class="text-xs font-semibold">Match</p>
       </div>
       <div class="flex flex-col items-center" :class="{ 'text-teal-600': $route.path === '/messages' }">
         <RouterLink to="/messages">
-          <IconMessages class="stroke-current"  />
+          <IconMessages class="stroke-current w-6 h-6"  />
         </RouterLink>
-        <p class="text-sm font-semibold">Messages</p>
+        <p class="text-xs font-semibold">Messages</p>
       </div>
       <div class="flex flex-col items-center" :class="{ 'text-teal-600': $route.path === '/profil' }">
         <RouterLink to="/profil">
-          <IconProfil class="stroke-current"  />
+          <IconProfil class="stroke-current w-6 h-6"  />
         </RouterLink>
-        <p class="text-sm font-semibold">Profil</p>
+        <p class="text-xs font-semibold">Profil</p>
       </div>
     </div>
 </main>

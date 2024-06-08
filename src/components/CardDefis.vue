@@ -6,12 +6,12 @@ import IconTime from './icons/IconTime.vue'
 </script>
 
 <template>
-        <div class="flex items-center justify-between gap-3 shadow-md rounded-md p-3">
-        <img class="w-28 h-28 rounded-md" src="/img/FitnessBase.webp" alt="">
+        <div class="flex items-center justify-between gap-2 shadow-md rounded-md p-3">
+        <img class="w-24 h-24 rounded-md" src="/img/RunningDefis.webp" alt="">
         <div class="flex-grow">
             <h1 class="text-lg font-bold text-zinc-900 overflow-hidden relative z-10">Minirathon</h1>
-            <p class="text-base font-semibold text-teal-600 pb-1">Course à pied</p>
-            <div class="flex items-center gap-1 pb-1">
+            <p class="text-base font-semibold text-teal-600">Course à pied</p>
+            <div class="flex items-center gap-1 ">
             <div class="flex items-center">
                 <p class="text-base font-semibold text-zinc-900">600</p>
                 <IconMoney />
@@ -21,9 +21,9 @@ import IconTime from './icons/IconTime.vue'
                 <IconMoneyPremium />
             </div>
             </div>
-            <div class="bg-zinc-200 rounded-lg flex items-center justify-center mr-16 px-1">
-                <IconTime class="w-6 h-6"/>
-                <p class="p-1 text-base font-medium text-zinc-900 ">3j et 6h</p>
+            <div class="bg-zinc-200 rounded-lg flex items-center justify-center w-24 px-1">
+                <IconTime class="w-5 h-5"/>
+                <p class="p-1 text-sm font-medium text-zinc-900 ">3j et 6h</p>
             </div>
         </div>
         <IconFav class="fill-transparent" />

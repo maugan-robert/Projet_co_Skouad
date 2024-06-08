@@ -14,7 +14,7 @@ function goBack() {
 
 <template>
     <header class="border-b-2 border-zinc-100 flex items-center justify-between">
-        <div class="flex mt-8 m-6">
+        <div class="flex mt-6 m-4">
     <template v-if="$route.path === '/' || $route.path ==='/events' || $route.path ==='/defis' || $route.path ==='/match' || $route.path ==='/messages' || $route.path ==='/shop' ">
     <RouterLink to="/">
     <LogoSkouad class=""/>
@@ -39,7 +39,7 @@ function goBack() {
   </template>
 </div>
 
-<div class="flex items-center ml-auto mt-8 m-6 gap-0.5">
+<div class="flex items-center ml-auto mt-6 m-4 gap-0.5">
     <p class="text-lg font-bold">1298</p>
     <IconMoney class="w-6 h-6" />
   </div>
