@@ -4,7 +4,10 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'lalezar': ['Lalezar', 'sans-serif'],
+        lexend: ['Lexend', 'sans-serif'],
+        manrope: ['Manrope', 'sans-serif'],
+        lalezar: ['Lalezar', 'cursive'],
+        niramit: ['Niramit', 'sans-serif'],
       },
     },
   },

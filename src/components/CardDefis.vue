@@ -9,8 +9,8 @@ import IconTime from './icons/IconTime.vue'
         <div class="flex items-center justify-between gap-2 shadow-md rounded-md p-3">
         <img class="w-24 h-24 rounded-md" src="/img/RunningDefis.webp" alt="">
         <div class="flex-grow">
-            <h1 class="text-lg font-bold text-zinc-900 overflow-hidden relative z-10">Minirathon</h1>
-            <p class="text-base font-semibold text-teal-600">Course à pied</p>
+            <h1 class="text-lg font-bold font-manrope text-zinc-900 overflow-hidden relative z-10">Minirathon</h1>
+            <p class="text-sm font-manrope font-semibold text-teal-600">Course à pied</p>
             <div class="flex items-center gap-1 ">
             <div class="flex items-center">
                 <p class="text-base font-semibold text-zinc-900">600</p>
