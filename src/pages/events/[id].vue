@@ -45,25 +45,14 @@ import IconLoc from '@/components/icons/IconLoc.vue';
             <p class="text-base font-manrope text-zinc-900 pt-2">Intermédiaire</p>
             </div>
             <h3 class="text-lg font-manrope font-semibold pt-4">Participants</h3>
-            <img class="w-8 h-8 m-3 mb-20" src="/img/IconeUser.webp" alt="">
+            <div class="flex-col items-center mb-20 mt-3 ml-3">
+            <img class="w-9 h-9 mb-1" src="/img/IconeUser.webp" alt="">
+            <p class="text-sm font-manrope font-bold text-zinc-600">Théo</p>
+            </div>
             <div class="flex justify-center fixed bottom-0 mb-14 right-0 left-0 bg-white bg-opacity-95 p-4">
             <button class="bg-teal-600 text-white text-sm font-medium py-3 px-20 rounded-md">Rejoindre</button>
             </div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
     </div>
 </template>
