@@ -1,7 +1,7 @@
 <script setup lang=ts>
+import { ref } from 'vue';
 import LogoSkouad from './icons/LogoSkouad.vue'
 import IconBack from './icons/IconBack.vue'
-import IconMoney from './icons/IconMoney.vue'
 import IconSettings from './icons/IconSettings.vue'
 import IconNotifs from './icons/IconNotifs.vue'
 import { RouterLink } from 'vue-router'
@@ -10,11 +10,17 @@ const router = useRouter();
 function goBack() {
   router.go(-1);
 }
+const activeMenu = ref(false)
+
+function closeMenu() {
+  activeMenu.value = false
+}
 </script>
 
 <template>
-    <header class="border-b-2 border-zinc-100 flex items-center justify-between">
-        <div class="flex mt-6 m-4">
+    <header class="border-b-2 border-zinc-100 flex items-center justify-between px-4">
+        <div class="flex mt-8 m-4">
+
     <template v-if="$route.path === '/' || $route.path ==='/events' || $route.path ==='/defis' || $route.path ==='/match' || $route.path ==='/messages' || $route.path ==='/shop' ">
     <RouterLink to="/">
     <LogoSkouad class=""/>
@@ -37,12 +43,50 @@ function goBack() {
       <IconBack />
     </RouterLink>
   </template>
-</div>
 
-<div class="flex items-center ml-auto mt-6 m-4 gap-0.5">
-    <p class="text-lg font-medium">1298</p>
-    <IconMoney class="w-6 h-6" />
-  </div>
+</div>
+  <button
+      class="relative z-30 flex h-3 w-6 flex-col justify-between *:block *:ease *:h-[2px] *:w-full *:transform *:rounded-full *:bg-black *:transition *:duration-300"
+      @click="activeMenu = !activeMenu"
+    >
+      <span :class="{ 'translate-y-[5px] rotate-45': activeMenu }"></span>
+      <span :class="{ '-translate-y-[5px] -rotate-45': activeMenu }"></span>
+    </button>
+    <nav
+      class="invisible flex-1  py-8 flex justify-between mt-20 flex-col fixed z-10 inset-0 bg-teal-50"
+      :class="{ '!visible !opacity-100': activeMenu }"
+      v-scroll-lock="activeMenu"
+    >
+      <ul class="flex flex-col gap-3">
+        <li>
+          <RouterLink class="block p-4 rounded-lg text-zinc-900" to="/" @click="closeMenu"
+            >Accueil</RouterLink> 
+          </li> 
+        <li>
+          <RouterLink
+            class="block p-4 rounded-lg text-gray-900"
+            to="/events"
+            @click="closeMenu"
+            >Events</RouterLink
+          >
+        </li>
+        <li>
+          <RouterLink class="block p-4 rounded-lg text-gray-900" to="/defis" @click="closeMenu"
+            >Défis</RouterLink
+          >
+        </li>
+        <li>
+          <RouterLink class="block p-4 rounded-lg text-gray-900" to="/shop" @click="closeMenu"
+            >Shop</RouterLink
+          >
+        </li>
+        <li>
+          <RouterLink class="block p-4 rounded-lg text-gray-900" to="/settings" @click="closeMenu"
+            >Paramètres</RouterLink
+          >
+        </li>
+      </ul>
+    </nav>  
 
 </header>
 </template>

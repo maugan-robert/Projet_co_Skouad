@@ -7,7 +7,7 @@ import IconFav from './icons/IconFav.vue'
     <div class="flex items-center justify-between gap-3 shadow-md rounded-md p-3">
         <img class="w-24 h-24 rounded-md" src="/img/FitnessBase.webp" alt="">
         <div class="flex-grow">
-            <h1 class="text-lg font-manrope font-bold text-zinc-900 overflow-hidden relative z-10">Séance sport chill</h1>
+            <h1 class="text-lg font-manrope font-bold text-zinc-900 overflow-hidden relative">Séance sport chill</h1>
             <div class="flex items-center justify-start">
                 <IconLoc class="w-4 h-4 fill-zinc-600" />
                 <p class="text-sm font-manrope font-semibold text-zinc-600">Montbéliard</p>

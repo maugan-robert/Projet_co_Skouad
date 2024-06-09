@@ -28,6 +28,7 @@ const rechercher = ref('');
             <button><IconTrier class="w-9 h-9" /></button>
         </div>
     </div>
+    <div class="flex flex-col gap-3 pb-16">
     <CardEvents/>
     <CardEvents/>
     <CardEvents/>
@@ -35,6 +36,7 @@ const rechercher = ref('');
     <CardEvents/>
     <CardEvents/>
     <CardEvents/>
+</div>
 </div>
 </div>
 </template>
