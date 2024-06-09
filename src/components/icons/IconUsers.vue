@@ -4,7 +4,7 @@
 <rect width="10" height="10" fill="url(#pattern0_215_1125)"/>
 </mask>
 <g mask="url(#mask0_215_1125)">
-<rect x="-3.19995" y="-3.3999" width="18.6" height="18.2" fill="white"/>
+<rect x="-3.19995" y="-3.3999" width="18.6" height="18.2" fill=""/>
 </g>
 <defs>
 <pattern id="pattern0_215_1125" patternContentUnits="objectBoundingBox" width="1" height="1">

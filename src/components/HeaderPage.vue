@@ -40,7 +40,7 @@ function goBack() {
 </div>
 
 <div class="flex items-center ml-auto mt-6 m-4 gap-0.5">
-    <p class="text-lg font-bold">1298</p>
+    <p class="text-lg font-medium">1298</p>
     <IconMoney class="w-6 h-6" />
   </div>
 
