@@ -16,31 +16,31 @@ const router = useRouter();
         <RouterLink to="/events">
           <IconEvents class="stroke-current w-6 h-6"/>
         </RouterLink>
-        <p class="text-xs font-semibold">Events</p>
+        <p class="text-xs">Events</p>
       </div>
       <div class="flex flex-col items-center" :class="{ 'text-teal-600': $route.path === '/defis' }">
         <RouterLink to="/defis">
           <IconDefis class="stroke-current w-6 h-6" />
         </RouterLink>
-        <p class="text-xs font-semibold">Défis</p>
+        <p class="text-xs">Défis</p>
       </div>
       <div class="flex flex-col items-center" :class="{ 'text-teal-600': $route.path === '/match' }">
         <RouterLink to="/match">
           <IconMatch class="stroke-current w-6 h-6"  />
         </RouterLink>
-        <p class="text-xs font-semibold">Match</p>
+        <p class="text-xs">Match</p>
       </div>
       <div class="flex flex-col items-center" :class="{ 'text-teal-600': $route.path === '/messages' }">
         <RouterLink to="/messages">
           <IconMessages class="stroke-current w-6 h-6"  />
         </RouterLink>
-        <p class="text-xs font-semibold">Messages</p>
+        <p class="text-xs">Messages</p>
       </div>
       <div class="flex flex-col items-center" :class="{ 'text-teal-600': $route.path === '/profil' }">
         <RouterLink to="/profil">
           <IconProfil class="stroke-current w-6 h-6"  />
         </RouterLink>
-        <p class="text-xs font-semibold">Profil</p>
+        <p class="text-xs">Profil</p>
       </div>
     </div>
 </main>
