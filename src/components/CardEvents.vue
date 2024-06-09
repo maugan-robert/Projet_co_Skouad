@@ -9,7 +9,7 @@ import IconFav from './icons/IconFav.vue'
         <div class="flex-grow">
             <h1 class="text-lg font-bold text-zinc-900 overflow-hidden relative z-10">Séance sport chill</h1>
             <div class="flex items-center justify-start">
-                <IconLoc class="w-4 h-4" />
+                <IconLoc class="w-4 h-4 stroke-zinc-600" />
                 <p class="text-base font-medium text-zinc-600">Montbéliard</p>
             </div>
             <p class="text-base font-semibold text-teal-600 pb-1">Fitness</p>

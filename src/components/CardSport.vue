@@ -10,7 +10,7 @@ import IconUsers from './icons/IconUsers.vue'
         <h1 class="text-white font-medium text-base">Ski</h1>
         <div class="flex items-center">
           <p class="text-white font-semibold text-sm mr-1">436</p>
-          <IconUsers class="w-4 h-6 text-white"/>   
+          <IconUsers class="w-3 h-5 pt-0.5 text-white"/>   
         </div>
       </div>
     </div>
