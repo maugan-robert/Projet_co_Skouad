@@ -61,6 +61,7 @@ import { ref } from 'vue';
                 </div>
                 </div>
 
+                <RouterLink to="/messages/groupe">
                 <div class="pt-2 flex items-center gap-2">
                 <img class="w-11 h-11" src="/img/IconeUserGroup.webp" alt="">
                 <div class="w-full">
@@ -73,6 +74,7 @@ import { ref } from 'vue';
                 </div>
                 </div>
                 </div>
+                </RouterLink>
             </div>
 
 

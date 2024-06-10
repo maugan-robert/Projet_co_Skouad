@@ -21,7 +21,7 @@ function closeMenu() {
 const route = useRoute()
 
 const showHeader = computed(() => {
-  return route.path !== '/messages/theo' && route.path !== '/groupemessage'
+  return route.path !== '/messages/theo' && route.path !== '/messages/groupe'
 })
 </script>
 
@@ -54,7 +54,7 @@ const showHeader = computed(() => {
         </div>
       </template>
 
-      <template v-else-if="$route.path === '/messages/theo' || $route.path === '/groupesms'">
+      <template v-else-if="$route.path === '/messages/theo'">
         <div
           class="px-4 pt-4 flex items-center gap-4 w-full justify-between border-b-2 border-zinc-100 pb-3.5 bg-white absolute top-0 left-0"
         >
@@ -68,6 +68,31 @@ const showHeader = computed(() => {
               <div class="">
                 <h2 class="font-manrope font-bold text-sm mr-6">ThéoJcx</h2>
                 <p class="font-lexend text-zinc-600 text-xs">En ligne</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 pr-4">
+              <IconTel class="w-5 h-5" />
+              <IconVisio class="w-6 h-6" />
+            </div>
+          </div>
+        </div>
+      </template>
+
+      
+      <template v-else-if="$route.path === '/messages/groupe'">
+        <div
+          class="px-4 pt-4 flex items-center gap-4 w-full justify-between border-b-2 border-zinc-100 pb-3.5 bg-white absolute top-0 left-0"
+        >
+          <RouterLink to="/" @click="goBack">
+            <IconBack />
+          </RouterLink>
+
+          <div class="pt-2 flex items-center justify-between w-full">
+            <div class="flex items-center gap-2 w-full">
+              <img class="w-11 h-11" src="/img/IconeUserGroup.webp" alt="" />
+              <div class="">
+                <h2 class="font-manrope font-bold text-sm mr-6">Running du di...</h2>
+                <p class="font-lexend text-zinc-600 text-xs">1 en ligne</p>
               </div>
             </div>
             <div class="flex items-center gap-4 pr-4">
