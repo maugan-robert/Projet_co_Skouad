@@ -4,17 +4,22 @@ import LogoSkouad from './icons/LogoSkouad.vue'
 import IconBack from './icons/IconBack.vue'
 import IconSettings from './icons/IconSettings.vue'
 import IconNotifs from './icons/IconNotifs.vue'
-import { RouterLink } from 'vue-router'
+import { RouterLink, RouterView, useRoute } from 'vue-router'
 import { useRouter } from 'vue-router';
 const router = useRouter();
 function goBack() {
   router.go(-1);
 }
+import { computed } from 'vue'
 const activeMenu = ref(false)
 
 function closeMenu() {
   activeMenu.value = false
 }
+const route = useRoute()
+  const showHeader = computed(() => {
+    return route.path !== '/theojucieux' && route.path !== '/groupemessage' 
+  });
 </script>
 
 <template>
@@ -38,6 +43,27 @@ function closeMenu() {
     </div>
   </template>
 
+  <template v-else-if="$route.path === '/theojucieux' || $route.path ==='/groupemessage'">
+    <div class="flex items-center justify-between ml-auto">
+      <RouterLink to="/" @click="goBack">
+      <IconBack />
+    </RouterLink>
+    <div class="pt-2 flex items-center gap-2">
+                <img class="w-11 h-11" src="/img/IconeUser.webp" alt="">
+                <div class="w-full">
+                    <div class="flex items-center justify-between w-full">
+                    <h2 class="flex-grow font-manrope font-bold text-sm">Théo Jucieux</h2>
+                </div>
+                    <div>   
+                    <p class="flex-grow font-lexend text-zinc-600 text-xs">En ligne</p>
+                </div>
+                </div>
+                </div>
+                
+    </div>
+  </template>
+
+
   <template v-else>
     <RouterLink to="/" @click="goBack">
       <IconBack />
@@ -45,7 +71,7 @@ function closeMenu() {
   </template>
 
 </div>
-  <button
+  <button v-if="showHeader"
       class="relative z-30 flex h-3 w-6 flex-col justify-between *:block *:ease *:h-[2px] *:w-full *:transform *:rounded-full *:bg-black *:transition *:duration-300"
       @click="activeMenu = !activeMenu"
     >
