@@ -25,7 +25,7 @@ import IconLoc from '@/components/icons/IconLoc.vue';
                 <p class="p-1 text-sm font-medium text-zinc-900 font-niramit">Sam. 16 mars <strong class="font-manrope">-11h</strong></p>
             </div>
             <div class="border-teal-600 border-2 rounded-lg flex items-center justify-center w-1/4 mt-2 p-1">
-                <p class="text-teal-600 text-base font-normal">Fitness</p>
+                <p class="text-teal-600 text-sm font-normal">Fitness</p>
             </div>
             <p class="text-sm text-zinc-900 pt-4 font-medium font-manrope">Salut, je recherche quelqu’un pour faire une petite séance jambes. Je fais de la musculation depuis 6 mois. L’objectif est de discuter ensemble, s’entraider et s’entrainer tranquillement.</p>
             <div class="flex items-center gap-1 py-4">
@@ -45,12 +45,12 @@ import IconLoc from '@/components/icons/IconLoc.vue';
             <p class="text-base font-manrope text-zinc-900 pt-2">Intermédiaire</p>
             </div>
             <h3 class="text-lg font-manrope font-semibold pt-4">Participants</h3>
-            <div class="flex-col items-center mb-20 mt-3 ml-3">
-            <img class="w-9 h-9 mb-1" src="/img/IconeUser.webp" alt="">
-            <p class="text-sm font-manrope font-bold text-zinc-600">Théo</p>
+            <div class="items-center mb-20 mt-3 ml-3">
+            <img class="w-11 h-11 mb-1" src="/img/IconeUser.webp" alt="">
+            <p class="text-sm font-manrope font-bold pl-1 text-zinc-600">Théo</p>
             </div>
             <div class="flex justify-center fixed bottom-0 mb-14 right-0 left-0 bg-white bg-opacity-95 p-4">
-            <button class="bg-teal-600 text-white text-sm font-medium py-3 px-20 rounded-md">Rejoindre</button>
+            <button class="bg-teal-600 text-white text-sm font-medium py-2 px-20 rounded-md">Rejoindre</button>
             </div>
         </div>
     </div>

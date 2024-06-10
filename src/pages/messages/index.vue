@@ -19,7 +19,7 @@ import { ref } from 'vue';
             </div>
             
             <div class="flex flex-col gap-1">
-            <RouterLink to="/theo">
+            <RouterLink to="/messages/theo">
             <div class="pt-2 flex items-center gap-2">
                 <img class="w-11 h-11" src="/img/IconeUser.webp" alt="">
                 <div class="w-full">
@@ -28,7 +28,7 @@ import { ref } from 'vue';
                     <p class="font-manrope text-xs text-zinc-600">12:43</p>
                 </div>
                     <div>   
-                    <p class="flex-grow font-lexend text-zinc-600 text-xs">Toujours ok pour dimanche ?</p>
+                    <p class="flex-grow font-lexend font-bold text-zinc-600 text-xs">Toujours ok dimanche ?</p>
                 </div>
                 </div>
                 </div>

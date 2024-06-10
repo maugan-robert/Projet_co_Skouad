@@ -22,17 +22,17 @@ import IconMoney from '@/components/icons/IconMoney.vue';
             </div>
             </div>
         </div>
+        <p class="text-sm text-zinc-900 pb-4 font-medium font-manrope">Cours avec 4 amis !</p>
             <div class="border-teal-600 border-2 rounded-lg flex items-center justify-center w-1/4 p-0.5">
-                <p class="text-teal-600 text-base font-normal">Fitness</p>
+                <p class="text-teal-600 text-sm font-normal">Fitness</p>
             </div>
-        <div class="bg-zinc-200 rounded-lg mt-2 flex items-center justify-center w-40 px-1">
+        <div class="bg-zinc-200 rounded-lg mt-2 flex items-center justify-center w-40 px-1 mb-20">
                 <IconTime class="w-5 h-5"/>
                 <p class="p-1 text-sm font-medium text-zinc-900 font-niramit">Sam. 16 mars <strong class="font-manrope">-11h</strong></p>
             </div>
 
-            <p class="text-sm text-zinc-900 pt-4 font-medium font-manrope mb-20">Salut, je recherche quelqu’un pour faire une petite séance jambes. Je fais de la musculation depuis 6 mois. L’objectif est de discuter ensemble, s’entraider et s’entrainer tranquillement.</p>
             <div class="flex justify-center fixed bottom-0 mb-14 right-0 left-0 bg-white bg-opacity-95 p-4">
-            <button class="bg-teal-600 text-white text-sm font-medium py-3 px-20 rounded-md">Participer</button>
+            <button class="bg-teal-600 text-white text-sm font-medium py-2 px-20 rounded-md">Participer</button>
             </div>
         </div>
     </div>
