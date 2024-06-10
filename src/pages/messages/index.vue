@@ -1,10 +1,8 @@
 <script setup lang="ts">
 import IconSearch from '@/components/icons/IconSearch.vue';
-
 const rechercher = ref('');
 import { ref } from 'vue';  
 </script>
-
 <template>
     <div class="mx-4">
         <h1 class="font-lalezar pt-4 pb-2 text-2xl font-bold">MESSAGES</h1>
@@ -21,7 +19,7 @@ import { ref } from 'vue';
             </div>
             
             <div class="flex flex-col gap-1">
-            <RouterLink to="/theojucieux">
+            <RouterLink to="/theo">
             <div class="pt-2 flex items-center gap-2">
                 <img class="w-11 h-11" src="/img/IconeUser.webp" alt="">
                 <div class="w-full">

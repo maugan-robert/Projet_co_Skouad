@@ -4,8 +4,10 @@ import LogoSkouad from './icons/LogoSkouad.vue'
 import IconBack from './icons/IconBack.vue'
 import IconSettings from './icons/IconSettings.vue'
 import IconNotifs from './icons/IconNotifs.vue'
-import { RouterLink, RouterView, useRoute } from 'vue-router'
+import { RouterLink, useRoute } from 'vue-router'
 import { useRouter } from 'vue-router';
+import IconTel from './icons/IconTel.vue'
+import IconVisio from './icons/IconVisio.vue' 
 const router = useRouter();
 function goBack() {
   router.go(-1);
@@ -17,8 +19,10 @@ function closeMenu() {
   activeMenu.value = false
 }
 const route = useRoute()
+
   const showHeader = computed(() => {
-    return route.path !== '/theojucieux' && route.path !== '/groupemessage' 
+
+    return route.path !== '/theo' && route.path !== '/groupemessage' 
   });
 </script>
 
@@ -43,23 +47,25 @@ const route = useRoute()
     </div>
   </template>
 
-  <template v-else-if="$route.path === '/theojucieux' || $route.path ==='/groupemessage'">
-    <div class="flex items-center justify-between ml-auto">
+  <template  v-else-if="$route.path === '/theo' || $route.path ==='/groupesms'">
+    <div class="px-4 pt-4 flex items-center gap-4 w-full justify-between border-b-2 border-zinc-100 pb-3.5 bg-white absolute top-0 left-0 ">
       <RouterLink to="/" @click="goBack">
       <IconBack />
     </RouterLink>
-    <div class="pt-2 flex items-center gap-2">
-                <img class="w-11 h-11" src="/img/IconeUser.webp" alt="">
-                <div class="w-full">
-                    <div class="flex items-center justify-between w-full">
-                    <h2 class="flex-grow font-manrope font-bold text-sm">Théo Jucieux</h2>
+
+      <div class="pt-2 flex items-center justify-between w-full ">
+        <div class="flex items-center gap-2 w-full">
+                  <img class="w-11 h-11" src="/img/IconeUser.webp" alt="">
+                  <div class="">
+                      <h2 class=" font-manrope font-bold text-sm mr-6">ThéoJcx</h2>
+                      <p class=" font-lexend text-zinc-600 text-xs">En ligne</p>
+                  </div>
                 </div>
-                    <div>   
-                    <p class="flex-grow font-lexend text-zinc-600 text-xs">En ligne</p>
-                </div>
-                </div>
-                </div>
-                
+                  <div class="flex items-center gap-4 pr-4 ">
+                    <IconTel class="w-5 h-5"/>
+                    <IconVisio class="w-6 h-6"/>
+                  </div>
+      </div>
     </div>
   </template>
 

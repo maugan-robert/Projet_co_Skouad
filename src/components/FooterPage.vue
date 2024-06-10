@@ -1,17 +1,10 @@
 <script setup lang="ts">
-import IconEvents from './icons/IconEvents.vue'
-import IconDefis from './icons/IconDefis.vue'
 import IconMessages from './icons/IconMessage.vue'
 import IconMatch from './icons/IconMatch.vue'
 import IconProfil from './icons/IconProfil.vue'
 import { RouterLink } from 'vue-router'
 import { useRouter } from 'vue-router';
 const router = useRouter();
-const activeMenu = ref(false)
-function closeMenu() {
-  activeMenu.value = false
-}
-import { ref } from 'vue';
 </script>
 
 <template>
