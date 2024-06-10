@@ -28,7 +28,7 @@ const route = useRoute()
 
 <template>
     <header class="border-b-2 border-zinc-100 flex items-center justify-between px-4">
-        <div class="flex mt-8 m-4">
+        <div class="flex mt-5 m-4">
 
     <template v-if="$route.path === '/' || $route.path ==='/events' || $route.path ==='/defis' || $route.path ==='/match' || $route.path ==='/messages' || $route.path ==='/shop' ">
     <RouterLink to="/">
