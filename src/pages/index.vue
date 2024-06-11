@@ -17,8 +17,6 @@ import CardDefis from '@/components/CardDefis.vue'
         >
       </div>
       <div class="flex flex-col justify-center gap-2">
-        <CardEvents />
-        <CardEvents />
       </div>
       <div class="flex items-center justify-between">
         <h2 class="py-4 font-lexend text-base font-bold text-zinc-900">TES SPORTS</h2>
@@ -47,8 +45,6 @@ import CardDefis from '@/components/CardDefis.vue'
         >
       </div>
       <div class="pb-16">
-        <CardDefis />
-        <CardDefis />
       </div>
     </div>
   </div>

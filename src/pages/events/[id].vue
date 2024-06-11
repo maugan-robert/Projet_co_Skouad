@@ -19,7 +19,7 @@ const bat:EventsResponse<any> = await infoEvents(route.params.id)
 
 
 
-import { pb } from '@/backend'
+
 
 
 </script>
@@ -50,7 +50,7 @@ import { pb } from '@/backend'
             <p class="text-sm text-zinc-900 pt-4 font-medium font-manrope">{{ event.description_events }}</p>
             <div class="flex items-center gap-1 py-4">
             <IconLoc class="w-4 h-4 fill-teal-600"/>
-            <a class="underline text-teal-600 font-manrope text-sm font-medium" :href="'https://www.google.com/maps/search/?api=1&query=' + '11+rue+de+la+Souaberie,+Montbéliard+25200'.split(' ').join('+')" target="_blank">11 rue de la Souaberie, Montbéliard 25200</a>
+            <a class="underline text-teal-600 font-manrope text-sm font-medium">{{ event.adresse_events}}</a>
             </div>
             <div class="flex items-center gap-2"> 
                 <div class="bg-zinc-600 rounded-lg flex items-center justify-center w-1/4 mt-2 py-1">
@@ -66,7 +66,7 @@ import { pb } from '@/backend'
             </div>
             <h3 class="text-lg font-manrope font-semibold pt-4">Participants</h3>
             <div class="items-center mb-20 mt-3 ml-3">
-            <ImgPb :record="bat" :filename="bat.img_participants1[1]" class="rounded-t-lg w-20 h-20"  alt="" />            <p class="text-sm font-manrope font-bold pl-1 text-zinc-600">{{ event.nom_participants1 }}</p>
+            <ImgPb :record="bat" :filename="bat.img_participants1" class="rounded-t-lg w-20 h-20"  alt="" />            <p class="text-sm font-manrope font-bold pl-1 text-zinc-600">{{ event.nom_participants1 }}</p>
             </div>
             <div class="flex justify-center fixed bottom-0 mb-14 right-0 left-0 bg-white bg-opacity-95 p-4">
             <button class="bg-teal-600 text-white text-sm font-medium py-2 px-20 rounded-md">Rejoindre</button>

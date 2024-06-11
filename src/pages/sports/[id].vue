@@ -28,10 +28,8 @@ import CardDefis from '@/components/CardDefis.vue';
         </div>
             </RouterLink>   
                 <h2 class="font-lalezar text-xl pt-5">EVENTS</h2>
-                <CardEvents/>
 
                 <h2 class="font-lalezar text-xl mt-4">DÉFIS</h2>
-                <CardDefis class="mb-2"/>
         </div>
         </div>
     </div>

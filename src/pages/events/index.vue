@@ -1,15 +1,13 @@
 <script setup lang="ts">
-
+import CardEvents from '@/components/CardEvents.vue';
 import IconSearch from '@/components/icons/IconSearch.vue';
 import IconTrier from '@/components/icons/IconTrier.vue';
+
 import { RouterLink } from 'vue-router';
 import { ref } from 'vue';
 const rechercher = ref('');
 
-
-import CardEvents from '@/components/CardEvents.vue';
 import { pb } from '@/backend'
-
 const eventsListe = await pb.collection('Events').getFullList(); 
 
 </script>

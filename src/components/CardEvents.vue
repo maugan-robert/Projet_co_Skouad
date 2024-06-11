@@ -1,12 +1,14 @@
 <script setup lang="ts">
 import IconLoc from './icons/IconLoc.vue'
 import IconFav from './icons/IconFav.vue'
+import { formatDate } from '@/helper'
 
 import type { EventsResponse } from '@/pocketbase-types';
 import ImgPb from '@/components/ImgPb.vue';
 
 const props = defineProps<EventsResponse<any>>();
 console.log('props : ',{...props});
+
 </script>
 
 <template>
@@ -20,7 +22,7 @@ console.log('props : ',{...props});
             </div>
             <p class="text-sm font-manrope font-semibold text-teal-600 pb-1">{{ Categorie }}</p>
             <div class="bg-zinc-200 rounded-lg flex items-center justify-center w-28 px-1">
-                <p class="p-1 font-niramit text-sm font-medium text-zinc-900 ">{{ Date_Events }}</p>
+                <p class="p-1 font-niramit text-sm font-medium text-zinc-900 ">{{ formatDate(Date_Events) }}</p>
             </div>
         </div>
         <IconFav class="fill-black"/>
