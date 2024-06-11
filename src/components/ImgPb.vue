@@ -1,3 +1,4 @@
+<ImgPb :record="props" :filename="Images[0]" class="rounded-t-lg w-full"  alt="" />
 <script setup lang="ts">
 import { pb } from '@/backend'
 import { type RecordModel } from 'pocketbase'

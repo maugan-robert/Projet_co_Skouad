@@ -11,3 +11,8 @@ export async function allBatiments() {
       const record = await pb.collection('Events').getOne(id)
       return record
   }
+
+  export async function infoDefis(id:string) {
+    const record = await pb.collection('Defis').getOne(id)
+    return record
+}

@@ -45,7 +45,7 @@ const eventsListe = await pb.collection('Events').getFullList();
           id: Events.id
         }
       }"
-      class="text-red-400 hover:text-red-600"
+      class=""
     >
     
       <CardEvents v-bind="Events"/>

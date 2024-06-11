@@ -38,14 +38,23 @@ export type AuthSystemFields<T = never> = {
 
 // Record types for each collection
 
+export enum DefisSportsOptions {
+	"Course à pied" = "Course à pied",
+	"Ski" = "Ski",
+	"Escalade" = "Escalade",
+	"Fitness" = "Fitness",
+}
 export type DefisRecord = {
-	Categorie?: string
 	Date_de_fin?: IsoDateString
 	Favoris?: boolean
 	Image?: string
 	Monnaie_recompense_basique?: number
 	Monnaie_recompense_premium?: number
 	Nom?: string
+	Sports?: DefisSportsOptions
+	description_defis?: string
+	img_full?: string
+	relation_sport?: RecordIdString
 }
 
 export enum EventsCategorieOptions {
@@ -53,6 +62,13 @@ export enum EventsCategorieOptions {
 	"Escalade" = "Escalade",
 	"Ski" = "Ski",
 	"Course à pied" = "Course à pied",
+	"Karting" = "Karting",
+	"Randonnée" = "Randonnée",
+	"Vélo" = "Vélo",
+	"VTT" = "VTT",
+	"Natation" = "Natation",
+	"Paintball" = "Paintball",
+	"Snowboard" = "Snowboard",
 }
 
 export enum EventsDifficulteEventOptions {
@@ -67,6 +83,7 @@ export type EventsRecord = {
 	Date_Events?: IsoDateString
 	Favoris?: boolean
 	Image?: string
+	Image_full?: string
 	Localisation?: string
 	Nom?: string
 	adresse_event?: string

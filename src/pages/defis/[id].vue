@@ -2,33 +2,47 @@
 import IconTime from '@/components/icons/IconTime.vue';
 import IconMoneyPremium from '@/components/icons/IconMoneyPremium.vue';
 import IconMoney from '@/components/icons/IconMoney.vue';
+import { ref } from 'vue';
+import { infoDefis } from '@/backend'
+import { useRoute } from 'vue-router/auto';
+import { formatDate } from '@/helper'
+import ImgPb from '@/components/ImgPb.vue';
+
+const route = useRoute('/defis/[id]')
+console.log('id :', route.params.id)
+const defis = ref()
+defis.value = await infoDefis(route.params.id)
+
+
+import type { DefisResponse } from '@/pocketbase-types';
+const bat:DefisResponse<any> = await infoDefis(route.params.id)
 </script>
 
 <template>
     <div pb-16>
-        <img src="/img/RunningFull.webp" alt="">
+        <ImgPb :record="bat" :filename="bat.img_full" class=""  alt="" />
         <div class="mx-4">
             <div class="pb-16">
                 <div class="flex items-center justify-between">
-            <h1 class="text-2xl font-manrope font-semibold py-3">Minirathon</h1>
+            <h1 class="text-2xl font-manrope font-semibold py-3">{{ defis.Nom }}</h1>
             <div class="flex items-center gap-2">
                 <div class="flex items-center gap-0.5">
-                <p class="text-base font-semibold text-zinc-900">600</p>
+                <p class="text-base font-semibold text-zinc-900">{{ defis.Monnaie_recompense_basique }}</p>
                 <IconMoney />
             </div>
                 <div class="flex items-center gap-0.5">
-                <p class="text-base font-semibold text-zinc-900">1200</p>
+                <p class="text-base font-semibold text-zinc-900">{{ defis.Monnaie_recompense_premium }}</p>
                 <IconMoneyPremium />
             </div>
             </div>
         </div>
-        <p class="text-sm text-zinc-900 pb-4 font-medium font-manrope">Cours avec 4 amis !</p>
-            <div class="border-teal-600 border-2 rounded-lg flex items-center justify-center w-1/4 p-0.5">
-                <p class="text-teal-600 text-sm font-normal">Fitness</p>
+        <p class="text-sm text-zinc-900 pb-4 font-medium font-manrope">{{ defis.description_defis }}</p>
+            <div class="border-teal-600 border-2 rounded-lg flex items-center justify-center w-28 p-0.5">
+                <p class="text-teal-600 text-sm font-normal">{{ defis.Sports }}</p>
             </div>
-        <div class="bg-zinc-200 rounded-lg mt-2 flex items-center justify-center w-40 px-1 mb-20">
+        <div class="bg-zinc-200 rounded-lg mt-2 flex items-center justify-center w-24 px-1 mb-20">
                 <IconTime class="w-5 h-5"/>
-                <p class="p-1 text-sm font-medium text-zinc-900 font-niramit">Sam. 16 mars <strong class="font-manrope">-11h</strong></p>
+                <p class="p-1 text-sm font-medium text-zinc-900 font-niramit">{{ formatDate(defis.Date_de_fin) }}</p>
             </div>
 
             <div class="flex justify-center fixed bottom-0 mb-14 right-0 left-0 bg-white bg-opacity-95 p-4">
