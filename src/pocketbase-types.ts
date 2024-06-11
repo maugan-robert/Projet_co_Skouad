@@ -106,6 +106,8 @@ export type SportsRecord = {
 	Nom?: string
 	Nombre_inscris?: number
 	Photo_illustration?: string
+	favori?: boolean
+	img_full?: string
 }
 
 export enum UtilisateurSportFavorisOptions {

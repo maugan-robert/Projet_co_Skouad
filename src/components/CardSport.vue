@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { SportsResponse } from '@/pocketbase-types';
 import IconUsers from './icons/IconUsers.vue'
+import { defineProps } from 'vue';
 
 import ImgPb from '@/components/ImgPb.vue';
 const props = defineProps<SportsResponse<any>>();
