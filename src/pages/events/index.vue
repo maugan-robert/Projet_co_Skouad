@@ -1,10 +1,17 @@
 <script setup lang="ts">
-import CardEvents from '@/components/CardEvents.vue';
+
 import IconSearch from '@/components/icons/IconSearch.vue';
 import IconTrier from '@/components/icons/IconTrier.vue';
 import { RouterLink } from 'vue-router';
 import { ref } from 'vue';
 const rechercher = ref('');
+
+
+import CardEvents from '@/components/CardEvents.vue';
+import { pb } from '@/backend'
+
+const eventsListe = await pb.collection('Events').getFullList(); 
+
 </script>
 
 <template>
@@ -29,13 +36,26 @@ const rechercher = ref('');
         </div>
     </div>
     <div class="flex flex-col gap-3 pb-16">
-    <CardEvents/>
-    <CardEvents/>
-    <CardEvents/>
-    <CardEvents/>
-    <CardEvents/>
-    <CardEvents/>
-    <CardEvents/>
+    
+
+        <ul>
+  <li v-for="Events of eventsListe" :key="Events.id">
+    <RouterLink
+      :to="{
+        name: '/events/[id]',
+        params: {
+          id: Events.id
+        }
+      }"
+      class="text-red-400 hover:text-red-600"
+    >
+    
+      <CardEvents v-bind="Events"/>
+    </RouterLink>
+  </li>
+</ul>
+
+
 </div>
 </div>
 </div>
