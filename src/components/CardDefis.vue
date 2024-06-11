@@ -17,7 +17,7 @@ import { formatDate } from '@/helper'
             <ImgPb :record="props" :filename="Image" class="rounded-t-lg w-20 h-20"  alt="" />
         <div class="flex-grow">
             <h1 class="text-lg font-bold font-manrope text-zinc-900 overflow-hidden relative">{{ Nom }}</h1>
-            <p class="text-sm font-manrope font-semibold text-teal-600">{{ Categorie }}</p>
+            <p class="text-sm font-manrope font-semibold text-teal-600">{{ Sports }}</p>
             <div class="flex items-center gap-1 ">
             <div class="flex items-center">
                 <p class="text-sm font-lexend font-medium text-zinc-900">{{ Monnaie_recompense_basique }}</p>

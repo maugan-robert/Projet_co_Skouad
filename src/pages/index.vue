@@ -29,10 +29,6 @@ import CardDefis from '@/components/CardDefis.vue'
       <div class="container">
         <div class="container">
           <div class="grid grid-cols-2 gap-2">
-            <CardSport />
-            <CardSport />
-            <CardSport />
-            <CardSport />
           </div>
         </div>
       </div>
