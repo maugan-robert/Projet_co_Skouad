@@ -44,7 +44,7 @@ const showHeader = computed(() => {
       </template>
 
       <template v-else-if="$route.path === '/profil'">
-        <div class="flex items-center">
+        <div class="flex items-center gap-2">
           <RouterLink to="/settings">
             <IconSettings />
           </RouterLink>

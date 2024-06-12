@@ -54,3 +54,10 @@ export async function DefisbySports(relation_sport:string) {
   });
   return eventssports;
 }
+
+export async function allDefisFavori() {
+  const defisFavoris = await pb.collection('Defis').getFullList({
+    filter: 'Favoris=true'
+  })
+  return defisFavoris
+}
