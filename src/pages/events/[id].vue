@@ -11,7 +11,6 @@ const route = useRoute('/events/[id]')
 console.log('id :', route.params.id)
 const event = ref()
 event.value = await infoEvents(route.params.id)
-import { formatDate } from '@/helper'
 
 
 import type { EventsResponse } from '@/pocketbase-types';
@@ -35,9 +34,9 @@ const bat:EventsResponse<any> = await infoEvents(route.params.id)
                 <p class="p-1 text-sm font-medium text-zinc-900 ">Discuter</p>
             </div>
         </div>
-        <div class="bg-zinc-200 rounded-lg mt-4 flex items-center justify-center w-20 px-1">
+        <div class="bg-zinc-200 rounded-lg flex items-center justify-center w-36 mt-3 px-1">
                 <IconTime class="w-5 h-5"/>
-                <p class="p-1 text-sm font-medium text-zinc-900 font-niramit">{{ formatDate(event.Date_Events) }}</p>
+                <p class="p-1 text-sm font-medium text-zinc-900 font-niramit">{{ event.Date_Events.slice(0,10) }}</p>
             </div>
             <div class="border-teal-600 border-2 rounded-lg flex items-center justify-center w-28 mt-2 p-1">
                 <p class="text-teal-600 text-sm font-normal">{{ event.Categorie }}</p>
@@ -68,6 +67,6 @@ const bat:EventsResponse<any> = await infoEvents(route.params.id)
             <button class="bg-teal-600 text-white text-sm font-medium py-2 px-20 rounded-md">Rejoindre</button>
             </div>
         </div>
-    </div>
+    </div>  
     </div>
 </template>

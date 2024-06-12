@@ -14,6 +14,7 @@ console.log('id :', route.params.id)
 
 const sports = ref()
 sports.value = await infoSports(route.params.id)
+
 const events = ref()
 events.value = await EventsbySports(route.params.id)
 console.log(events.value)

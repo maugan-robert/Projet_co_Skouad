@@ -4,18 +4,18 @@ export const pb= new pocketbase(import.meta.env.VITE_URL_POCKETBASE) as TypedPoc
 
   
  export async function infoEvents(id:string) {
-      const record = await pb.collection('Events').getOne(id)
-      return record
+      const record1 = await pb.collection('Events').getOne(id)
+      return record1
   }
 
 export async function infoDefis(id:string) {
-    const record = await pb.collection('Defis').getOne(id)
-    return record
+    const record2 = await pb.collection('Defis').getOne(id)
+    return record2
 }
 
 export async function infoSports(id:string) {
-    const record = await pb.collection('Sports').getOne(id)
-    return record
+    const record3 = await pb.collection('Sports').getOne(id)
+    return record3
 }  
 
 
@@ -54,4 +54,3 @@ export async function DefisbySports(relation_sport:string) {
   });
   return eventssports;
 }
-

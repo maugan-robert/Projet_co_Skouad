@@ -40,9 +40,9 @@ const bite:DefisResponse<any> = await infoDefis(route.params.id)
             <div class="border-teal-600 border-2 rounded-lg flex items-center justify-center w-28 p-0.5">
                 <p class="text-teal-600 text-sm font-normal">{{ defis.Sports }}</p>
             </div>
-        <div class="bg-zinc-200 rounded-lg mt-2 flex items-center justify-center w-24 px-1 mb-20">
-                <IconTime class="w-5 h-5"/>
-                <p class="p-1 text-sm font-medium text-zinc-900 font-niramit">{{ formatDate(defis.Date_de_fin) }}</p>
+        <div class="bg-zinc-200 rounded-lg mt-2 flex items-center justify-center w-24   px-1">
+                <IconTime class="w-6 h-6"/>
+                <p class="p-1 text-sm font-medium text-zinc-900 font-niramit">{{ defis.Date_de_fin }}</p>
             </div>
 
             <div class="flex justify-center fixed bottom-0 mb-14 right-0 left-0 bg-white bg-opacity-95 p-4">

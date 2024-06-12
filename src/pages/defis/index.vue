@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import CardDefis from '@/components/CardDefis.vue'
-import IconSearch from '@/components/icons/IconSearch.vue'
-import IconTrier from '@/components/icons/IconTrier.vue'
+import CardDefis from '@/components/CardDefis.vue';
+import IconSearch from '@/components/icons/IconSearch.vue';
+import IconTrier from '@/components/icons/IconTrier.vue';
 
 import { RouterLink } from 'vue-router';
-import { ref } from 'vue'
+import { ref } from 'vue';
 const rechercher = ref('');
 
-
 import { pb } from '@/backend'
-const defisListe = await pb.collection('Defis').getFullList()
+const defisListe = await pb.collection('Defis').getFullList(); 
+
 </script>
 
 <template>
@@ -33,7 +33,7 @@ const defisListe = await pb.collection('Defis').getFullList()
         </div>
       </div>
       <div class="flex flex-col gap-2 pb-16">
-        <ul>
+         <ul>
           <li v-for="Defis of defisListe" :key="Defis.id">
             <RouterLink
               :to="{
@@ -42,11 +42,12 @@ const defisListe = await pb.collection('Defis').getFullList()
                   id: Defis.id
                 }
               }"
+              class=""
             >
-              <CardDefis v-bind="Defis"/>
+              <CardDefis v-bind="Defis"/> 
             </RouterLink>
           </li>
-        </ul>
+        </ul> 
       </div>
     </div>
   </div>

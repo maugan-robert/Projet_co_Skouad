@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import IconLoc from './icons/IconLoc.vue'
 import IconFav from './icons/IconFav.vue'
+
 import { formatDate } from '@/helper'
 import { defineProps } from 'vue';
 import type { EventsResponse } from '@/pocketbase-types';
@@ -20,8 +21,8 @@ console.log('props : ',{...props});
                 <p class="text-sm font-manrope font-semibold text-zinc-600">{{ Localisation }}</p>
             </div>
             <p class="text-sm font-manrope font-semibold text-teal-600 pb-1">{{ Categorie }}</p>
-            <div class="bg-zinc-200 rounded-lg flex items-center justify-center w-20 px-1">
-                <p class="p-1 font-niramit text-sm font-medium text-zinc-900 ">{{ formatDate(Date_Events) }}</p>
+            <div class="bg-zinc-200 rounded-lg flex items-center justify-center w-28 px-1">
+                <p class="p-1 font-niramit text-sm font-medium text-zinc-900 ">{{ formatDate(Date_Events).slice(0,10) }}</p>    
             </div>
         </div>
         <div>

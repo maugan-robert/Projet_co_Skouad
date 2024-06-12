@@ -3,18 +3,18 @@ import IconFav from './icons/IconFav.vue'
 import IconMoney from './icons/IconMoney.vue'
 import IconMoneyPremium from './icons/IconMoneyPremium.vue';
 import IconTime from './icons/IconTime.vue'
-import type { DefisResponse } from '@/pocketbase-types';
 
+import type { DefisResponse, DefisRecord } from '@/pocketbase-types';
+import { defineProps } from 'vue';
 import ImgPb from '@/components/ImgPb.vue';
+
 const props = defineProps<DefisResponse<any>>();
     console.log('props : ',{...props});
-
-import { formatDate } from '@/helper'
 </script>
 
 <template>
         <div class="flex items-center justify-between gap-2 shadow-md rounded-md p-3">
-            <ImgPb :record="props" :filename="Image" class="rounded-lg w-20 h-20"  alt="" />
+      <ImgPb :record="props" :filename="Image" class="rounded-lg w-20 h-20"  alt="" /> 
         <div class="flex-grow">
             <h1 class="text-lg font-bold font-manrope text-zinc-900 overflow-hidden relative">{{ Nom }}</h1>
             <p class="text-sm font-manrope font-semibold text-teal-600">{{ Sports }}</p>
@@ -28,9 +28,9 @@ import { formatDate } from '@/helper'
                 <IconMoneyPremium />
             </div>
             </div>
-            <div class="bg-zinc-200 rounded-lg flex items-center justify-center w-20 px-1">
-                <IconTime class="opacity-90 w-4 h-4"/>
-                <p class="p-1 text-xs font-manrope text-zinc-900 ">{{ formatDate(Date_de_fin) }}</p>
+            <div class="bg-zinc-200 rounded-lg flex items-center justify-center w-24 px-1">
+                <IconTime class="opacity-90 w-5 h-5"/>
+                <p class="p-1 font-niramit text-sm font-medium text-zinc-900 ">{{ Date_de_fin }}</p>
             </div>
         </div>
         <IconFav class="fill-transparent" />

@@ -45,7 +45,7 @@ export enum DefisSportsOptions {
 	"Fitness" = "Fitness",
 }
 export type DefisRecord = {
-	Date_de_fin?: IsoDateString
+	Date_de_fin?: string
 	Favoris?: boolean
 	Image?: string
 	Monnaie_recompense_basique?: number
