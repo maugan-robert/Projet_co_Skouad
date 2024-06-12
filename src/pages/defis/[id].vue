@@ -15,12 +15,12 @@ defis.value = await infoDefis(route.params.id)
 
 
 import type { DefisResponse } from '@/pocketbase-types';
-const bat:DefisResponse<any> = await infoDefis(route.params.id)
+const bite:DefisResponse<any> = await infoDefis(route.params.id)
 </script>
 
 <template>
     <div pb-16>
-        <ImgPb :record="bat" :filename="bat.img_full" class=""  alt="" />
+        <ImgPb :record="bite" :filename="bite.img_full" class=""  alt="" />
         <div class="mx-4">
             <div class="pb-16">
                 <div class="flex items-center justify-between">

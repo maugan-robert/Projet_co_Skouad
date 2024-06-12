@@ -5,7 +5,7 @@ import IconTrier from '@/components/icons/IconTrier.vue'
 
 import { RouterLink } from 'vue-router';
 import { ref } from 'vue'
-const rechercher = ref('')
+const rechercher = ref('');
 
 
 import { pb } from '@/backend'

@@ -38,3 +38,20 @@ export async function allDefisUnfavori() {
     })
     return defisUnfavoris
 }
+
+export async function EventsbySports(relation_sport:string) {
+  const eventssports = await pb.collection('Events').getFullList({
+      expand: 'relation_sport',
+      filter: `relation_sport.id = "${relation_sport}"`
+  });
+  return eventssports;
+}
+
+export async function DefisbySports(relation_sport:string) {
+  const eventssports = await pb.collection('Defis').getFullList({
+      expand: 'relation_sport',
+      filter: `relation_sport.id = "${relation_sport}"`
+  });
+  return eventssports;
+}
+

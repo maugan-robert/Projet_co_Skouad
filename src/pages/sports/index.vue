@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { RouterLink } from 'vue-router'
-import CardSport from '@/components/CardSport.vue'
-import { ref } from 'vue'
-const rechercher = ref('')
-import IconSearch from '@/components/icons/IconSearch.vue'
+import { RouterLink } from 'vue-router';
+import CardSport from '@/components/CardSport.vue';
+import { ref } from 'vue';
+const rechercher = ref('');
+import IconSearch from '@/components/icons/IconSearch.vue';
 
-import { pb } from '@/backend'
+import { pb } from '@/backend';
 const sportsListe = await pb.collection('Sports').getFullList(); 
 </script>
 

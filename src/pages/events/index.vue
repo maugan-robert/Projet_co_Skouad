@@ -34,8 +34,6 @@ const eventsListe = await pb.collection('Events').getFullList();
         </div>
     </div>
     <div class="flex flex-col gap-3 pb-16">
-    
-
         <ul>
   <li v-for="Events of eventsListe" :key="Events.id">
     <RouterLink
@@ -47,7 +45,6 @@ const eventsListe = await pb.collection('Events').getFullList();
       }"
       class=""
     >
-    
       <CardEvents v-bind="Events"/>
     </RouterLink>
   </li>

@@ -14,7 +14,7 @@ import { formatDate } from '@/helper'
 
 <template>
         <div class="flex items-center justify-between gap-2 shadow-md rounded-md p-3">
-            <ImgPb :record="props" :filename="Image" class="rounded-t-lg w-20 h-20"  alt="" />
+            <ImgPb :record="props" :filename="Image" class="rounded-lg w-20 h-20"  alt="" />
         <div class="flex-grow">
             <h1 class="text-lg font-bold font-manrope text-zinc-900 overflow-hidden relative">{{ Nom }}</h1>
             <p class="text-sm font-manrope font-semibold text-teal-600">{{ Sports }}</p>
