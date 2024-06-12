@@ -23,9 +23,11 @@
         </div>
         </RouterLink>
 
-        <div class="p-3 flex items-center justify-between rounded-lg">
+        <RouterLink to="profil/noteavis" class="rounded-lg">
+        <div class="p-3 flex items-center justify-between">
             <h2 class="font-manrope font-bold text-zinc-900">Notes et avis</h2>
         </div>
+        </RouterLink>
         <div class="p-3 flex items-center justify-between rounded-lg">
             <h2 class="font-manrope font-bold text-zinc-900">Mes sports</h2>
         </div>
