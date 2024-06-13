@@ -23,5 +23,4 @@
     </div>
     <button class=" my-2 flex rounded-xl px-14 p-2  text-white bg-teal-600 font-lexend text-sm  text-center justify-center" type="submit">Envoyer</button>
     </div>
-  
 </template>
