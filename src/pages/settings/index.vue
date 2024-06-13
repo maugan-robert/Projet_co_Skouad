@@ -1,5 +1,7 @@
 <script setup lang="ts">
-
+import { RouterLink } from 'vue-router'
+import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 </script>
 
 <template>
@@ -15,18 +17,22 @@
       <div class="p-3 flex items-center justify-between rounded-lg">
         <h2 class="font-manrope font-bold text-zinc-900">Paramètres du compte</h2>
       </div>
+      <RouterLink to="/settings/termes">
       <div class="p-3 flex items-center justify-between rounded-lg">
         <h2 class="font-manrope font-bold text-zinc-900">Termes & Conditions générales</h2>
       </div>
+    </RouterLink>
       <div class="p-3 flex items-center justify-between rounded-lg">
         <h2 class="font-manrope font-bold text-zinc-900">CGU et CGV</h2>
       </div>
       <div class="p-3 flex items-center justify-between rounded-lg">
         <h2 class="font-manrope font-bold text-zinc-900">Vous aimez Skouad ? Evaluez-nous !</h2>
       </div>
+      <RouterLink to="/settings/contact">
       <div class="p-3 flex items-center justify-between rounded-lg">
         <h2 class="font-manrope font-bold text-zinc-900">Nous contacter</h2>
       </div>
+    </RouterLink>
     </div>
 </div>
 </template>
