@@ -45,13 +45,13 @@ const doLoginOAuth = async () => {
     }
 }
 
-const updateTitle = (newTitle: string) => {
+const updateTitlee = (newTitle: string) => {
   document.title = newTitle;
 };
 
 
 onMounted(() => {
-  updateTitle('');
+  updateTitlee('');
 });
 
 
