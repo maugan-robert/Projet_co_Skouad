@@ -15,6 +15,13 @@ const sports = [
   'Karting', 'Ski', 'Paintball', 'Fitness', 'Natation', 'Escalade'
 ];
 
+const updateTitle = (newTitle: string) => {
+  document.title = newTitle;
+};
+import { onMounted } from 'vue';
+onMounted(() => {
+  updateTitle('Mes sports');
+});
 const favoris = ref(
   sports.reduce((acc, sport) => {
     acc[sport] = false;

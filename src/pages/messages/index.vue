@@ -2,6 +2,13 @@
 import IconSearch from '@/components/icons/IconSearch.vue';
 const rechercher = ref('');
 import { ref } from 'vue';  
+const updateTitle = (newTitle: string) => {
+  document.title = newTitle;
+};
+import { onMounted } from 'vue';
+onMounted(() => {
+  updateTitle('Messages');
+});
 </script>
 <template>
     <div class="mx-4">

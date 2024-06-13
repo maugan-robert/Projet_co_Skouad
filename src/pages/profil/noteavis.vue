@@ -1,5 +1,12 @@
 <script setup lang="ts">    
 import IconStars from '@/components/icons/IconStars.vue';
+const updateTitle = (newTitle: string) => {
+  document.title = newTitle;
+};
+import { onMounted } from 'vue';
+onMounted(() => {
+  updateTitle('Note et avis');
+});
 </script>
 
 <template>

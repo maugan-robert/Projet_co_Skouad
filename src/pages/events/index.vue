@@ -45,6 +45,13 @@ async function resetFilters() {
   eventsListe.value = await fetchEvents(); // Fetch all events
   showOverlay.value = false; // Close overlay after resetting filters
 }
+const updateTitle = (newTitle: string) => {
+  document.title = newTitle;
+};
+import { onMounted } from 'vue';
+onMounted(() => {
+  updateTitle('Events');
+});
 </script>
 
 <template>

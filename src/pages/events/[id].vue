@@ -16,6 +16,13 @@ event.value = await infoEvents(route.params.id)
 import type { EventsResponse } from '@/pocketbase-types';
 const bat:EventsResponse<any> = await infoEvents(route.params.id)
 
+    const updateTitle = (newTitle: string) => {
+  document.title = newTitle;
+};
+import { onMounted } from 'vue';
+onMounted(() => {
+  updateTitle('Events');
+});
 </script>
 
 <template>

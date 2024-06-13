@@ -14,6 +14,13 @@
   </template>
   
   <script setup lang="ts">
+  const updateTitle = (newTitle: string) => {
+  document.title = newTitle;
+};
+import { onMounted } from 'vue';
+onMounted(() => {
+  updateTitle('Connexion');
+});
   import { pb } from '@/backend';
 import IconBack from '@/components/icons/IconBack.vue';
 import { onMounted, ref } from 'vue'

@@ -10,6 +10,13 @@ import { allDefisUnfavori } from '@/backend'
 const eventsFavoris = await allEventsFavori()
 const sportsFavoris = await allSportsFavori()
 const defisUnfavoris = await allDefisUnfavori()
+const updateTitle = (newTitle: string) => {
+  document.title = newTitle;
+};
+import { onMounted } from 'vue';
+onMounted(() => {
+  updateTitle('Skouad');
+});
 </script>
 
 <template>

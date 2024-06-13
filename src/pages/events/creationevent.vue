@@ -128,6 +128,13 @@
 </template>
 
 <script script lang="ts">
+const updateTitle = (newTitle: string) => {
+  document.title = newTitle;
+};
+import { onMounted } from 'vue';
+onMounted(() => {
+  updateTitle('Création Event');
+});
 import { defineComponent, reactive, ref, computed } from 'vue';
 import PocketBase from 'pocketbase';
 import { EventsCategorieOptions } from '@/pocketbase-types';

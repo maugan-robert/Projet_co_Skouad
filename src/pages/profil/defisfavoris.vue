@@ -4,6 +4,13 @@ import CardDefis from '@/components/CardDefis.vue'
 import { allDefisFavori } from '@/backend'
 
 const defisFavoris = await allDefisFavori()
+const updateTitle = (newTitle: string) => {
+  document.title = newTitle;
+};
+import { onMounted } from 'vue';
+onMounted(() => {
+  updateTitle('Mes défis');
+});
 </script>
 
 <template>

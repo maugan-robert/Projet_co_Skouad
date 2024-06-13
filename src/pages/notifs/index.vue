@@ -1,4 +1,11 @@
 <script setup lang="ts">
+const updateTitle = (newTitle: string) => {
+  document.title = newTitle;
+};
+import { onMounted } from 'vue';
+onMounted(() => {
+  updateTitle('Notifications');
+});
 </script>
 
 <template>

@@ -2,7 +2,13 @@
 import { RouterLink } from 'vue-router'
 import CardEvents from '@/components/CardEvents.vue'
 import { allEventsFavori } from '@/backend'
-
+const updateTitle = (newTitle: string) => {
+  document.title = newTitle;
+};
+import { onMounted } from 'vue';
+onMounted(() => {
+  updateTitle('Futurs Events');
+});
 const eventsFavoris = await allEventsFavori()
 </script>
 

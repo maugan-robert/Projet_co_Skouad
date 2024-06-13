@@ -16,6 +16,13 @@ defis.value = await infoDefis(route.params.id)
 
 import type { DefisResponse } from '@/pocketbase-types';
 const bite:DefisResponse<any> = await infoDefis(route.params.id)
+    const updateTitle = (newTitle: string) => {
+  document.title = newTitle;
+};
+import { onMounted } from 'vue';
+onMounted(() => {
+  updateTitle('Défis');
+});
 </script>
 
 <template>

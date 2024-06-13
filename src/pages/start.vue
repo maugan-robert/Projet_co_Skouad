@@ -1,7 +1,14 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref } from 'vue'
 import Pocketbase from 'pocketbase'
 import IconGoogle from '@/components/icons/IconGoogle.vue';
+const updateTitle = (newTitle: string) => {
+  document.title = newTitle;
+};
+import { onMounted } from 'vue';
+onMounted(() => {
+  updateTitle('Bienvenue');
+});
 
 let email = ref('')
 let password = ref('')
@@ -9,7 +16,7 @@ let currentuser = ref()
 let pb: Pocketbase | null = null
 
 onMounted(async () => {
-    pb = new Pocketbase('http://127.0.0.1:8090')
+    pb = new Pocketbase('https://skouad.mauganrobert.fr:443')
 
 })
 

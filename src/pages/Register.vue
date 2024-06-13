@@ -29,11 +29,18 @@
   </template>
   
   <script setup lang="ts">
+  const updateTitle = (newTitle: string) => {
+  document.title = newTitle;
+};
+import { onMounted } from 'vue';
+onMounted(() => {
+  updateTitle('Inscription');
+});
   import { pb } from '@/backend';
 import { ref } from 'vue'
   import { useRouter } from 'vue-router'
   import IconBack from '@/components/icons/IconBack.vue';
-  
+
   const router = useRouter()
   const form = ref({
     username: '',

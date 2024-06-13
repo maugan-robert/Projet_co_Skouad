@@ -7,6 +7,13 @@ import IconSearch from '@/components/icons/IconSearch.vue';
 
 import { pb } from '@/backend';
 const sportsListe = await pb.collection('Sports').getFullList(); 
+const updateTitle = (newTitle: string) => {
+  document.title = newTitle;
+};
+import { onMounted } from 'vue';
+onMounted(() => {
+  updateTitle('Tous les sports');
+});
 </script>
 
 <template>

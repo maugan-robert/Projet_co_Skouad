@@ -3,7 +3,13 @@ import { ref } from 'vue';
 import { RouterLink, useRouter } from 'vue-router';
 import IconBack from '@/components/icons/IconBack.vue';
 import IconFav from '@/components/icons/IconFav.vue';
-
+const updateTitle = (newTitle: string) => {
+  document.title = newTitle;
+};
+import { onMounted } from 'vue';
+onMounted(() => {
+  updateTitle('Choix des sports');
+});
 const router = useRouter();
 
 function goBack() {

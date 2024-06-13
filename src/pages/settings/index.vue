@@ -2,6 +2,13 @@
 import { RouterLink } from 'vue-router'
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
+const updateTitle = (newTitle: string) => {
+  document.title = newTitle;
+};
+import { onMounted } from 'vue';
+onMounted(() => {
+  updateTitle('Paramètres');
+});
 </script>
 
 <template>

@@ -10,6 +10,13 @@ const rechercher = ref('');
 import { pb } from '@/backend'
 const defisListe = await pb.collection('Defis').getFullList(); 
 
+const updateTitle = (newTitle: string) => {
+  document.title = newTitle;
+};
+import { onMounted } from 'vue';
+onMounted(() => {
+  updateTitle('Défis');
+});
 </script>
 
 <template>

@@ -1,5 +1,12 @@
 <script setup lang="ts">
 import IconMoney from '@/components/icons/IconMoney.vue';
+const updateTitle = (newTitle: string) => {
+  document.title = newTitle;
+};
+import { onMounted } from 'vue';
+onMounted(() => {
+  updateTitle('Shop');
+});
 </script>
 
 <template>

@@ -32,8 +32,16 @@
   </template>
   
   <script setup lang="ts">
+  const updateTitle = (newTitle: string) => {
+  document.title = newTitle;
+};
+import { onMounted } from 'vue';
+onMounted(() => {
+  updateTitle('Profil');
+});
+
   import { ref } from 'vue'
-  import { defineProps, watch, onMounted } from 'vue';
+  import { defineProps, watch } from 'vue';
   
   import type { UsersResponse } from '@/pocketbase-types';
   import Pocketbase from 'pocketbase'
