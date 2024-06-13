@@ -8,9 +8,7 @@ import type { RecordService } from 'pocketbase'
 export enum Collections {
 	Defis = "Defis",
 	Events = "Events",
-	Shop = "Shop",
 	Sports = "Sports",
-	Utilisateur = "Utilisateur",
 	Users = "users",
 }
 
@@ -97,41 +95,12 @@ export type EventsRecord = {
 	relation_sport?: RecordIdString
 }
 
-export type ShopRecord = {
-	Nom_reduction?: string
-	Prix?: number
-}
-
 export type SportsRecord = {
 	Nom?: string
 	Nombre_inscris?: number
 	Photo_illustration?: string
 	favori?: boolean
 	img_full?: string
-}
-
-export enum UtilisateurSportFavorisOptions {
-	"Course à pied" = "Course à pied",
-	"Paintball" = "Paintball",
-	"Fitness" = "Fitness",
-	"Natation" = "Natation",
-	"Vélo" = "Vélo",
-	"Marche/Randonnée" = "Marche/Randonnée",
-	"Ski" = "Ski",
-	"Snowboard" = "Snowboard",
-	"Escalade" = "Escalade",
-	"VTT" = "VTT",
-	"Karting" = "Karting",
-}
-export type UtilisateurRecord = {
-	Age?: number
-	Description?: string
-	Nom?: string
-	Note_attribuee?: number
-	Photo_de_profil?: string
-	Prenom?: string
-	Sport_favoris?: UtilisateurSportFavorisOptions[]
-	Ville?: string
 }
 
 export type UsersRecord = {
@@ -145,9 +114,7 @@ export type UsersRecord = {
 // Response types include system fields and match responses from the PocketBase API
 export type DefisResponse<Texpand = unknown> = Required<DefisRecord> & BaseSystemFields<Texpand>
 export type EventsResponse<Texpand = unknown> = Required<EventsRecord> & BaseSystemFields<Texpand>
-export type ShopResponse<Texpand = unknown> = Required<ShopRecord> & BaseSystemFields<Texpand>
 export type SportsResponse<Texpand = unknown> = Required<SportsRecord> & BaseSystemFields<Texpand>
-export type UtilisateurResponse<Texpand = unknown> = Required<UtilisateurRecord> & BaseSystemFields<Texpand>
 export type UsersResponse<Texpand = unknown> = Required<UsersRecord> & AuthSystemFields<Texpand>
 
 // Types containing all Records and Responses, useful for creating typing helper functions
@@ -155,18 +122,14 @@ export type UsersResponse<Texpand = unknown> = Required<UsersRecord> & AuthSyste
 export type CollectionRecords = {
 	Defis: DefisRecord
 	Events: EventsRecord
-	Shop: ShopRecord
 	Sports: SportsRecord
-	Utilisateur: UtilisateurRecord
 	users: UsersRecord
 }
 
 export type CollectionResponses = {
 	Defis: DefisResponse
 	Events: EventsResponse
-	Shop: ShopResponse
 	Sports: SportsResponse
-	Utilisateur: UtilisateurResponse
 	users: UsersResponse
 }
 
@@ -176,8 +139,6 @@ export type CollectionResponses = {
 export type TypedPocketBase = PocketBase & {
 	collection(idOrName: 'Defis'): RecordService<DefisResponse>
 	collection(idOrName: 'Events'): RecordService<EventsResponse>
-	collection(idOrName: 'Shop'): RecordService<ShopResponse>
 	collection(idOrName: 'Sports'): RecordService<SportsResponse>
-	collection(idOrName: 'Utilisateur'): RecordService<UtilisateurResponse>
 	collection(idOrName: 'users'): RecordService<UsersResponse>
 }

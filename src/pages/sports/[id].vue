@@ -64,7 +64,7 @@ const bat: SportsResponse<any> = await infoSports(route.params.id)
               <CardEvents v-bind="Events" />
             </RouterLink>
           </li>
-          <li class="flex flex-col font-manrope text-base py-3 gap-2" v-if="events.length === 0">Aucun events n'est disponible, créer en un dès maintenant <RouterLink to="/create-event"><button class="bg-teal-600 text-sm font-medium text-white rounded-lg px-6 py-2.5 items-center flex justify-center">Créer</button></RouterLink></li>
+          <li class="flex flex-col font-manrope text-base py-3 gap-2" v-if="events.length === 0">Aucun events n'est disponible, créer en un dès maintenant <RouterLink to="/events/creationevent"><button class="bg-teal-600 text-sm font-medium text-white rounded-lg px-6 py-2.5 items-center flex justify-center">Créer</button></RouterLink></li>
         </ul>
         <h2 class="font-lalezar text-xl mt-4">DÉFIS</h2>
         <ul class="flex flex-col gap-3">
