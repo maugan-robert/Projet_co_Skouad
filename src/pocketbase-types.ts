@@ -135,8 +135,11 @@ export type UtilisateurRecord = {
 }
 
 export type UsersRecord = {
+	age?: number
 	avatar?: string
+	description?: string
 	name?: string
+	ville?: string
 }
 
 // Response types include system fields and match responses from the PocketBase API

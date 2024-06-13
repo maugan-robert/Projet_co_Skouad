@@ -13,7 +13,7 @@ const defisUnfavoris = await allDefisUnfavori()
 </script>
 
 <template>
-  <div class="bg-zinc-50">
+  <div class="bg-zinc-50 home">
     <div class="mx-4">
       <div class="flex items-center justify-between">
         <h2 class="py-4 font-lexend text-base font-bold text-zinc-900">TES PROCHAINS EVENTS</h2>
