@@ -13,6 +13,7 @@ function goBack() {
   router.go(-1)
 }
 import { computed } from 'vue'
+import IconMoney from './icons/IconMoney.vue'
 const activeMenu = ref(false)
 
 function closeMenu() {
@@ -109,7 +110,14 @@ const showHeader = computed(() => {
         </RouterLink>
       </template>
     </div>
-    <div v-if="showHeader">
+
+
+
+    <div v-if="showHeader" class="flex items-center gap-3">
+      <div class="flex items-center pt-0.5">
+      <p class="font-manrope font-bold">1500</p>
+      <IconMoney class="w-6 h-6" />
+    </div>
     <button
       class="relative z-30 flex h-3 w-6 flex-col justify-between *:block *:ease *:h-[2px] *:w-full *:transform *:rounded-full *:bg-black *:transition *:duration-300"
       @click="activeMenu = !activeMenu"
@@ -118,11 +126,11 @@ const showHeader = computed(() => {
       <span :class="{ '-translate-y-[5px] -rotate-45': activeMenu }"></span>
     </button>
     <nav
-      class="invisible flex-1 py-8 flex justify-between mt-20 flex-col fixed z-10 inset-0 bg-teal-50"
+      class="invisible flex-1 py-8 flex justify-between mt-16 flex-col fixed z-10 inset-0 bg-teal-50"
       :class="{ '!visible !opacity-100': activeMenu }"
       v-scroll-lock="activeMenu"
     >
-      <ul class="flex flex-col gap-3">
+      <ul class="flex flex-col gap-3 *:font-bold *:font-manrope">
         <li>
           <RouterLink class="block p-4 rounded-lg text-zinc-900" to="/" @click="closeMenu"
             >Accueil</RouterLink
@@ -134,7 +142,7 @@ const showHeader = computed(() => {
           >
         </li>
         <li>
-          <RouterLink class="block p-4 rounded-lg text-gray-900" to="/defis" @click="closeMenu"
+          <RouterLink class="block p-4 rounded-lg text-zinc-900" to="/defis" @click="closeMenu"
             >Défis</RouterLink
           >
         </li>

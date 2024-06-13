@@ -3,6 +3,7 @@ import IconFav from './icons/IconFav.vue'
 import IconMoney from './icons/IconMoney.vue'
 import IconMoneyPremium from './icons/IconMoneyPremium.vue';
 import IconTime from './icons/IconTime.vue'
+import { ref } from 'vue';
 
 import type { DefisResponse, DefisRecord } from '@/pocketbase-types';
 import { defineProps } from 'vue';
@@ -10,6 +11,23 @@ import ImgPb from '@/components/ImgPb.vue';
 
 const props = defineProps<DefisResponse<any>>();
     console.log('props : ',{...props});
+
+    const sports = [
+  'Course à pied', 'Vélo', 'VTT', 'Randonnée', 'Snowboard',
+  'Karting', 'Ski', 'Paintball', 'Fitness', 'Natation', 'Escalade'
+];
+
+
+const favoris = ref(
+  sports.reduce((acc, sport) => {
+    acc[sport] = false;
+    return acc;
+  }, {})
+);
+
+function toggleFavori(sport) {
+  favoris.value[sport] = !favoris.value[sport];
+}
 </script>
 
 <template>
@@ -33,7 +51,10 @@ const props = defineProps<DefisResponse<any>>();
                 <p class="p-1 font-niramit text-sm font-medium text-zinc-900 ">{{ Date_de_fin }}</p>
             </div>
         </div>
-        <IconFav class="fill-transparent" />
+        <IconFav
+          @click="toggleFavori(sport)"
+          :class="['w-6 h-6', { 'fill-black': favoris[sport], 'fill-none': !favoris[sport], 'stroke-black': !favoris[sport] }]"
+        />
     </div>
 
 </template>
